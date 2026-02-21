@@ -69,7 +69,7 @@ func (s *Store) Delete(ctx context.Context, key string) int {
 	return 0
 }
 
-func (s *Store) Expire(ctx context.Context, key string, seconds int64) bool {
+func (s *Store) Expire(ctx context.Context, key string, seconds int) bool {
 	if ctx.Err() != nil {
 		return false
 	}

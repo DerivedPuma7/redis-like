@@ -6,7 +6,7 @@ type KeyValueRepository interface {
 	Set(ctx context.Context, key, value string)
 	Get(ctx context.Context, key string) (string, bool)
 	Delete(ctx context.Context, key string) int
-	Expire(ctx context.Context, key string, seconds int64) bool
+	Expire(ctx context.Context, key string, seconds int) bool
 	TTL(ctx context.Context, key string) int64
 	Persist(ctx context.Context, key string) bool
 	Keys(ctx context.Context, pattern string) []string
